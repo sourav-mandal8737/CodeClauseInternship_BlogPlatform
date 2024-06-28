@@ -292,7 +292,7 @@
   <footer>
     <p>&copy; 2024 Health & Fitness Blog. All rights reserved.</p>
   </footer>
-  <script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   const Articles = [
     {
@@ -406,7 +406,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderFeaturedArticles() {
     featuredContainer.innerHTML = '';
-    Articles.filter(article => article.featured).forEach(article => {
+    const featuredArticles = Articles.filter(article => article.featured).slice(0, 4); // Limit to 4 articles
+    featuredArticles.forEach(article => {
       const carouselItem = document.createElement('div');
       carouselItem.classList.add('carousel-item');
       carouselItem.innerHTML = `
@@ -435,14 +436,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const totalItems = featuredContainer.children.length;
       currentIndex = (currentIndex + 1) % totalItems;
       updateCarousel();
-    }, 4000); // Change slide every 4 seconds
+    }, 4000); 
   }
 
   function stopCarousel() {
     clearInterval(carouselInterval);
   }
 
-  // Event listeners for navigation
   document.querySelectorAll('nav ul li a').forEach(navLink => {
     navLink.addEventListener('click', (e) => {
       e.preventDefault();
@@ -459,15 +459,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Event listener for the download buttons in featured articles
   featuredContainer.addEventListener('click', (event) => {
     if (event.target.tagName === 'A' && event.target.getAttribute('href') && event.target.getAttribute('href').startsWith('Articles/')) {
-      // Handle download logic if needed
       console.log('Download initiated:', event.target.getAttribute('href'));
     }
   });
 
-  // Initial rendering
   renderFeaturedArticles();
   renderArticles('all');
 });
