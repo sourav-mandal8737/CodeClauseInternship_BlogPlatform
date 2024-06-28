@@ -282,12 +282,12 @@
       <h2>All Articles</h2>
       <div id="all-Articles"></div>
     </section>
-    <section class="comment-section">
-      <h4>Comments</h4>
-      <div id="comments"></div>
-      <input type="text" id="comment-input" placeholder="Add a comment...">
-      <button onclick="addComment()">Post Comment</button>
-    </section>
+<section class="comment-section">
+  <h4>Comments</h4>
+  <div id="comments"></div>
+  <input type="text" id="comment-input" placeholder="Add a comment...">
+  <button onclick="addComment()">Post Comment</button>
+</section>
   </main>
   <footer>
     <p>&copy; 2024 Health & Fitness Blog. All rights reserved.</p>
@@ -380,6 +380,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const featuredContainer = document.getElementById('featured-Articles');
   const allArticlesContainer = document.getElementById('all-Articles');
+  const commentsContainer = document.getElementById('comments');
+  const commentInput = document.getElementById('comment-input');
+
   let currentIndex = 0;
   let carouselInterval;
 
@@ -441,6 +444,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function stopCarousel() {
     clearInterval(carouselInterval);
+  }
+
+  function addComment() {
+    const commentText = commentInput.value.trim();
+
+    if (commentText !== '') {
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+      commentDiv.textContent = commentText;
+
+      commentsContainer.appendChild(commentDiv);
+
+      // Clear the input field after posting comment
+      commentInput.value = '';
+    }
   }
 
   document.querySelectorAll('nav ul li a').forEach(navLink => {
