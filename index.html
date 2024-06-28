@@ -293,206 +293,184 @@
     <p>&copy; 2024 Health & Fitness Blog. All rights reserved.</p>
   </footer>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const Articles = [
-        {
-          id: 1,
-          title: "Top 10 Exercises for a Full-Body Workout",
-          image: "Images/top.png",
-          content: "Explore essential exercises like squats and push-ups, engaging major muscle groups for strength and conditioning, ensuring a balanced fitness regimen that enhances overall health and physical performance through comprehensive, effective workouts targeting core, upper body, and lower body strength...",
-          category: "exercise",
-          featured: true,
-          file: "Articles/Top 10 exercise.pdf"
-        },
-        {
-          id: 2,
-          title: "Balanced Diet for Weight Loss",
-          image: "Images/diet.jpeg",
-          content: "Achieve weight loss goals with a balanced diet emphasizing lean proteins, whole grains, and a variety of fruits and vegetables, promoting sustainable health while managing caloric intake effectively for long-term weight management and overall well-being, ensuring nutritional balance and vitality...",
-          category: "nutrition",
-          featured: true,
-          file: "Articles/balanced diet.pdf"
-        },
-        {
-          id: 3,
-          title: "Mental Wellness: Tips for a Healthier Mind",
-          image: "Images/mental.jpeg",
-          content: "Foster mental resilience through mindfulness practices, regular physical activity, and meaningful social interactions, empowering individuals to manage stress effectively and cultivate a positive mindset that supports emotional well-being and overall mental health, enhancing clarity, focus, and emotional stability...",
-          category: "wellness",
-          featured: true,
-          file: "Articles/mental wellness.pdf"
-        },
-        {
-          id: 4,
-          title: "Healthy Eating: A Beginner's Guide",
-          image: "Images/food.jpeg",
-          content: "Master the fundamentals of nutrition with guidance on portion control, meal planning, and making nutritious food choices that prioritize whole foods and balanced meals, empowering beginners to adopt healthy eating habits for sustained vitality and improved overall health, ensuring nutritional adequacy and long-term well-being...",
-          category: "nutrition",
-          featured: true,
-          file: "Articles/Healthy eating.pdf"
-        },
-        {
-          id: 5,
-          title: "Cardio Workouts for Heart Health",
-          image: "Images/cardio.jpeg",
-          content: "Enhance cardiovascular fitness with diverse aerobic exercises like running, swimming, and cycling, improving heart function, endurance, and circulation to support optimal cardiovascular health and overall physical fitness through regular, effective cardio workouts that promote heart strength and respiratory efficiency...",
-          category: "exercise",
-          featured: true,
-          file: "Articles/heart health.pdf"
-        },
-        {
-          id: 6,
-          title: "Mindfulness Meditation Techniques",
-          image: "Images/medi.jpeg",
-          content: "Cultivate mindfulness through guided practices such as deep breathing and body awareness, reducing stress and enhancing mental clarity and focus for improved emotional resilience, overall well-being, and a deeper connection to oneself through regular meditation sessions that promote relaxation and inner peace...",
-          category: "wellness",
-          featured: true,
-          file: "Articles/mindfulness.pdf"
-        },
-                {
-          id: 7,
-          title: "Superfoods for a Healthy Diet",
-          image: "Images/superfood.jpeg",
-          content: "Integrate nutrient-dense superfoods such as berries and leafy greens into daily meals to maximize antioxidant intake and essential nutrients, supporting immune function, cellular health, and overall vitality for enhanced well-being and long-term health benefits through a nutritious diet that promotes energy and vitality...",
-          category: "nutrition",
-          featured: true,
-          file: "Articles/superfood.pdf"
-        },
-                {
-          id: 8,
-          title: "Strength Training Basics",
-          image: "Images/strength.jpeg",
-          content: "Learn foundational strength exercises such as squats, deadlifts, and push-ups to build muscle strength, improve posture, and increase metabolism through effective resistance training techniques that promote physical endurance, functional strength, and overall fitness enhancement, ensuring muscular development and physical resilience...",
-          category: "exercise",
-          featured: true,
-          file: "Articles/strength training.pdf"
-        },
-                {
-          id: 9,
-          title: "Yoga for Flexibility",
-          image: "Images/yoga.jpeg",
-          content: "Enhance flexibility, joint mobility, and relaxation with beginner-friendly yoga poses and stretching routines that promote stress relief, mental calmness, and physical agility, fostering a balanced mind-body connection and overall well-being through the practice of gentle, rejuvenating yoga sessions that promote relaxation and physical rejuvenation....",
-          category: "wellness",
-          featured: true,
-          file: "Articles/yoga for flexibility.pdf"
-        },
-      ];
+document.addEventListener('DOMContentLoaded', () => {
+  const Articles = [
+    {
+      id: 1,
+      title: "Top 10 Exercises for a Full-Body Workout",
+      image: "Images/top.png",
+      content: "Explore essential exercises like squats and push-ups, engaging major muscle groups for strength and conditioning, ensuring a balanced fitness regimen that enhances overall health and physical performance through comprehensive, effective workouts targeting core, upper body, and lower body strength...",
+      category: "exercise",
+      featured: true,
+      file: "Articles/Top 10 exercise.pdf"
+    },
+    {
+      id: 2,
+      title: "Balanced Diet for Weight Loss",
+      image: "Images/diet.jpeg",
+      content: "Achieve weight loss goals with a balanced diet emphasizing lean proteins, whole grains, and a variety of fruits and vegetables, promoting sustainable health while managing caloric intake effectively for long-term weight management and overall well-being, ensuring nutritional balance and vitality...",
+      category: "nutrition",
+      featured: true,
+      file: "Articles/balanced diet.pdf"
+    },
+    {
+      id: 3,
+      title: "Mental Wellness: Tips for a Healthier Mind",
+      image: "Images/mental.jpeg",
+      content: "Foster mental resilience through mindfulness practices, regular physical activity, and meaningful social interactions, empowering individuals to manage stress effectively and cultivate a positive mindset that supports emotional well-being and overall mental health, enhancing clarity, focus, and emotional stability...",
+      category: "wellness",
+      featured: true,
+      file: "Articles/mental wellness.pdf"
+    },
+    {
+      id: 4,
+      title: "Healthy Eating: A Beginner's Guide",
+      image: "Images/food.jpeg",
+      content: "Master the fundamentals of nutrition with guidance on portion control, meal planning, and making nutritious food choices that prioritize whole foods and balanced meals, empowering beginners to adopt healthy eating habits for sustained vitality and improved overall health, ensuring nutritional adequacy and long-term well-being...",
+      category: "nutrition",
+      featured: true,
+      file: "Articles/Healthy eating.pdf"
+    },
+    {
+      id: 5,
+      title: "Cardio Workouts for Heart Health",
+      image: "Images/cardio.jpeg",
+      content: "Enhance cardiovascular fitness with diverse aerobic exercises like running, swimming, and cycling, improving heart function, endurance, and circulation to support optimal cardiovascular health and overall physical fitness through regular, effective cardio workouts that promote heart strength and respiratory efficiency...",
+      category: "exercise",
+      featured: true,
+      file: "Articles/heart health.pdf"
+    },
+    {
+      id: 6,
+      title: "Mindfulness Meditation Techniques",
+      image: "Images/medi.jpeg",
+      content: "Cultivate mindfulness through guided practices such as deep breathing and body awareness, reducing stress and enhancing mental clarity and focus for improved emotional resilience, overall well-being, and a deeper connection to oneself through regular meditation sessions that promote relaxation and inner peace...",
+      category: "wellness",
+      featured: true,
+      file: "Articles/mindfulness.pdf"
+    },
+    {
+      id: 7,
+      title: "Superfoods for a Healthy Diet",
+      image: "Images/superfood.jpeg",
+      content: "Integrate nutrient-dense superfoods such as berries and leafy greens into daily meals to maximize antioxidant intake and essential nutrients, supporting immune function, cellular health, and overall vitality for enhanced well-being and long-term health benefits through a nutritious diet that promotes energy and vitality...",
+      category: "nutrition",
+      featured: true,
+      file: "Articles/superfood.pdf"
+    },
+    {
+      id: 8,
+      title: "Strength Training Basics",
+      image: "Images/strength.jpeg",
+      content: "Learn foundational strength exercises such as squats, deadlifts, and push-ups to build muscle strength, improve posture, and increase metabolism through effective resistance training techniques that promote physical endurance, functional strength, and overall fitness enhancement, ensuring muscular development and physical resilience...",
+      category: "exercise",
+      featured: true,
+      file: "Articles/strength training.pdf"
+    },
+    {
+      id: 9,
+      title: "Yoga for Flexibility",
+      image: "Images/yoga.jpeg",
+      content: "Enhance flexibility, joint mobility, and relaxation with beginner-friendly yoga poses and stretching routines that promote stress relief, mental calmness, and physical agility, fostering a balanced mind-body connection and overall well-being through the practice of gentle, rejuvenating yoga sessions that promote relaxation and physical rejuvenation....",
+      category: "wellness",
+      featured: true,
+      file: "Articles/yoga for flexibility.pdf"
+    },
+  ];
 
-      const featuredContainer = document.getElementById('featured-Articles');
-      const allArticlesContainer = document.getElementById('all-Articles');
-      let currentIndex = 0;
-      let carouselInterval;
+  const featuredContainer = document.getElementById('featured-Articles');
+  const allArticlesContainer = document.getElementById('all-Articles');
+  let currentIndex = 0;
+  let carouselInterval;
 
-      function displayArticles(category) {
-        allArticlesContainer.innerHTML = '';
-        const filteredArticles = category === 'all' ? Articles : Articles.filter(article => article.category === category);
-        filteredArticles.forEach((article, index) => {
-          const articleCard = document.createElement('div');
-          articleCard.classList.add('article-card');
-          if (index % 2 === 1) {
-            articleCard.classList.add('alt');
-          }
-          articleCard.innerHTML = `
-            <img src="${article.image}" alt="${article.title}">
-            <div class="article-content">
-              <h3>${article.title}</h3>
-              <p>${article.content}</p>
-              <a href="${article.file}" target="_blank">Download</a>
-            </div>
-          `;
-          allArticlesContainer.appendChild(articleCard);
-        });
+  function renderArticles(category) {
+    allArticlesContainer.innerHTML = '';
+    const filteredArticles = category === 'all' ? Articles : Articles.filter(article => article.category === category);
+    filteredArticles.forEach((article, index) => {
+      const articleCard = document.createElement('div');
+      articleCard.classList.add('article-card');
+      if (index % 2 === 1) {
+        articleCard.classList.add('alt');
       }
-
-      function displayFeaturedArticles() {
-        featuredContainer.innerHTML = '';
-        const featuredArticles = Articles.filter(article => article.featured).slice(0, 4);
-        featuredArticles.forEach(article => {
-          const carouselItem = document.createElement('div');
-          carouselItem.classList.add('carousel-item');
-          carouselItem.innerHTML = `
-            <div class="article-card">
-              <img src="${article.image}" alt="${article.title}">
-              <div class="article-content">
-                <h3>${article.title}</h3>
-                <p>${article.content}</p>
-                <a href="${article.file}" target="_blank">Download</a>
-              </div>
-            </div>
-          `;
-          featuredContainer.appendChild(carouselItem);
-        });
-        updateCarousel();
-        startCarousel();
-      }
-
-      function updateCarousel() {
-        const totalItems = featuredContainer.children.length;
-        featuredContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-      }
-
-      function startCarousel() {
-        carouselInterval = setInterval(() => {
-          const totalItems = featuredContainer.children.length;
-          currentIndex = (currentIndex + 1) % totalItems;
-          updateCarousel();
-        }, 4000); // Change slide every 3 seconds
-      }
-
-      function stopCarousel() {
-        clearInterval(carouselInterval);
-      }
-
-      document.getElementById('next').addEventListener('click', () => {
-        stopCarousel();
-        const totalItems = featuredContainer.children.length;
-        currentIndex = (currentIndex + 1) % totalItems;
-        updateCarousel();
-        startCarousel();
-      });
-
-      document.getElementById('prev').addEventListener('click', () => {
-        stopCarousel();
-        const totalItems = featuredContainer.children.length;
-        if (currentIndex === 0) {
-          currentIndex = totalItems - 1;
-        } else {
-          currentIndex = (currentIndex - 1) % totalItems;
-        }
-        updateCarousel();
-        startCarousel();
-      });
-
-      document.querySelectorAll('nav ul li a').forEach(navLink => {
-        navLink.addEventListener('click', (e) => {
-          e.preventDefault();
-          const category = navLink.getAttribute('data-category');
-          if (category === 'home') {
-            document.getElementById('featured').style.display = 'block';
-            displayFeaturedArticles();
-            displayArticles('all');
-          } else {
-            document.getElementById('featured').style.display = 'none';
-            displayArticles(category);
-            document.querySelector('#Articles h2').textContent = category.charAt(0).toUpperCase() + category.slice(1) + ' Articles';
-          }
-        });
-      });
-
-      function addComment() {
-        const commentInput = document.getElementById('comment-input');
-        const commentText = commentInput.value;
-        if (commentText) {
-          const comment = document.createElement('div');
-          comment.textContent = commentText;
-          document.getElementById('comments').appendChild(comment);
-          commentInput.value = '';
-        }
-      }
-
-      displayFeaturedArticles();
-      displayArticles('all'); // Display all articles initially
+      articleCard.innerHTML = `
+        <img src="${article.image}" alt="${article.title}">
+        <div class="article-content">
+          <h3>${article.title}</h3>
+          <p>${article.content}</p>
+          <a href="${article.file}" target="_blank">Download</a>
+        </div>
+      `;
+      allArticlesContainer.appendChild(articleCard);
     });
-  </script>
+  }
+
+  function renderFeaturedArticles() {
+    featuredContainer.innerHTML = '';
+    Articles.filter(article => article.featured).forEach(article => {
+      const carouselItem = document.createElement('div');
+      carouselItem.classList.add('carousel-item');
+      carouselItem.innerHTML = `
+        <div class="article-card">
+          <img src="${article.image}" alt="${article.title}">
+          <div class="article-content">
+            <h3>${article.title}</h3>
+            <p>${article.content}</p>
+            <a href="${article.file}" target="_blank">Download</a>
+          </div>
+        </div>
+      `;
+      featuredContainer.appendChild(carouselItem);
+    });
+    updateCarousel();
+    startCarousel();
+  }
+
+  function updateCarousel() {
+    const totalItems = featuredContainer.children.length;
+    featuredContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function startCarousel() {
+    carouselInterval = setInterval(() => {
+      const totalItems = featuredContainer.children.length;
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    }, 4000); // Change slide every 4 seconds
+  }
+
+  function stopCarousel() {
+    clearInterval(carouselInterval);
+  }
+
+  // Event listeners for navigation
+  document.querySelectorAll('nav ul li a').forEach(navLink => {
+    navLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const category = navLink.getAttribute('data-category');
+      if (category === 'home') {
+        document.getElementById('featured').style.display = 'block';
+        renderFeaturedArticles();
+        renderArticles('all');
+      } else {
+        document.getElementById('featured').style.display = 'none';
+        renderArticles(category);
+        document.querySelector('#Articles h2').textContent = `${category.charAt(0).toUpperCase() + category.slice(1)} Articles`;
+      }
+    });
+  });
+
+  // Event listener for the download buttons in featured articles
+  featuredContainer.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A' && event.target.getAttribute('href') && event.target.getAttribute('href').startsWith('Articles/')) {
+      // Handle download logic if needed
+      console.log('Download initiated:', event.target.getAttribute('href'));
+    }
+  });
+
+  // Initial rendering
+  renderFeaturedArticles();
+  renderArticles('all');
+});
+</script>
 </body>
 </html>
