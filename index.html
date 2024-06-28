@@ -207,6 +207,69 @@
         text-align: center;
       }
     }
+#comments-section {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 1400px;
+}
+
+#comments-section h2 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 1.5rem;
+}
+
+#comments-container {
+  margin-bottom: 1.5rem;
+}
+
+.comment {
+  background-color: #fff;
+  border-left: 4px solid #007bff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#comment-input {
+  width: calc(100% - 20px);
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  resize: vertical;
+  margin: 0 auto 1rem auto;
+}
+
+#post-comment-button {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#post-comment-button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+  #comment-input,
+  #post-comment-button {
+    width: calc(80% - 20px);
+  }
+}
 
     .carousel {
       position: relative;
@@ -282,11 +345,11 @@
       <h2>All Articles</h2>
       <div id="all-Articles"></div>
     </section>
-<section class="comment-section">
-  <h4>Comments</h4>
-  <div id="comments"></div>
-  <input type="text" id="comment-input" placeholder="Add a comment...">
-  <button onclick="addComment()">Post Comment</button>
+<section id="comments-section">
+  <h2>Comments</h2>
+  <div id="comments-container"></div>
+  <textarea id="comment-input" placeholder="Write your comment here..."></textarea>
+  <button id="post-comment-button">Post Comment</button>
 </section>
   </main>
   <footer>
@@ -295,7 +358,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const Articles = [
-    {
+        {
       id: 1,
       title: "Top 10 Exercises for a Full-Body Workout",
       image: "Images/top.png",
@@ -380,8 +443,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const featuredContainer = document.getElementById('featured-Articles');
   const allArticlesContainer = document.getElementById('all-Articles');
-  const commentsContainer = document.getElementById('comments');
+  const commentsContainer = document.getElementById('comments-container');
   const commentInput = document.getElementById('comment-input');
+  const postCommentButton = document.getElementById('post-comment-button');
 
   let currentIndex = 0;
   let carouselInterval;
@@ -482,6 +546,8 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log('Download initiated:', event.target.getAttribute('href'));
     }
   });
+
+  postCommentButton.addEventListener('click', addComment);
 
   renderFeaturedArticles();
   renderArticles('all');
